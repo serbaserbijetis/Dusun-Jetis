@@ -1,0 +1,26 @@
+[
+  {
+    "nama": "Masjid Al-Huda",
+    "jenis": "Masjid",
+    "lat": -7.6062,
+    "lng": 110.2328,
+    "keterangan": "Masjid utama dusun Jetis",
+    "icon": "https://cdn-icons-png.flaticon.com/512/1998/1998611.png"
+  },
+  {
+    "nama": "Mushola Baiturrahman",
+    "jenis": "Mushola",
+    "lat": -7.6067,
+    "lng": 110.2331,
+    "keterangan": "Mushola di RT 02",
+    "icon": "https://cdn-icons-png.flaticon.com/512/1998/1998611.png"
+  },
+  {
+    "nama": "Toilet Umum Pasar",
+    "jenis": "Toilet",
+    "lat": -7.6069,
+    "lng": 110.2322,
+    "keterangan": "Toilet umum dekat pasar dusun",
+    "icon": "https://cdn-icons-png.flaticon.com/512/3062/3062634.png"
+  }
+] 

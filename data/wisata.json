@@ -1,0 +1,16 @@
+[
+  {
+    "nama": "Wisata Alam Kali Jetis",
+    "lat": -7.6071,
+    "lng": 110.2319,
+    "keterangan": "Wisata alam di tepi sungai Jetis",
+    "icon": "https://cdn-icons-png.flaticon.com/512/684/684908.png"
+  },
+  {
+    "nama": "Agrowisata Kebun Salak",
+    "lat": -7.6058,
+    "lng": 110.2335,
+    "keterangan": "Kebun salak milik warga yang dibuka untuk umum",
+    "icon": "https://cdn-icons-png.flaticon.com/512/684/684908.png"
+  }
+] 
