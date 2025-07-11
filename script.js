@@ -90,14 +90,35 @@ setInterval(updateCuaca, 10*60*1000); // update tiap 10 menit
 // === Sidebar Menu Collapsible ===
 const menuSidebar = document.getElementById('sidebar-menu');
 const menuToggle = document.getElementById('menu-toggle');
+const sidebarOverlay = document.getElementById('sidebar-overlay');
+function showSidebar() {
+  menuSidebar.classList.remove('collapsed');
+  if (window.innerWidth < 900 && sidebarOverlay) sidebarOverlay.classList.add('active');
+}
+function hideSidebar() {
+  menuSidebar.classList.add('collapsed');
+  if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+}
 if (menuSidebar && menuToggle) {
   menuToggle.addEventListener('click', () => {
-    menuSidebar.classList.toggle('collapsed');
+    if (menuSidebar.classList.contains('collapsed')) {
+      showSidebar();
+    } else {
+      hideSidebar();
+    }
   });
   // Tutup sidebar setelah klik menu di mobile
   menuSidebar.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      if (window.innerWidth < 700) menuSidebar.classList.add('collapsed');
+      if (window.innerWidth < 900) hideSidebar();
     });
   });
-} 
+}
+if (sidebarOverlay) {
+  sidebarOverlay.addEventListener('click', hideSidebar);
+}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && menuSidebar && !menuSidebar.classList.contains('collapsed')) {
+    hideSidebar();
+  }
+}); 
