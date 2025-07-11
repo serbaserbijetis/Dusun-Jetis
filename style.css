@@ -399,3 +399,78 @@ body, #layout {
     overflow-y: auto;
   }
 }
+/***** RESPONSIVE OPTIMIZATION *****/
+@media (max-width: 1200px) {
+  main {
+    max-width: 98vw;
+    padding: 1.5em 1em;
+  }
+}
+@media (max-width: 900px) {
+  #upbar-widget {
+    padding: 0.5em 0.7em 0.5em 0.7em;
+    gap: 8px;
+  }
+  main {
+    max-width: 98vw;
+    padding: 1.2em 0.7em;
+  }
+}
+@media (max-width: 700px) {
+  #upbar-widget {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    padding: 0.3em 0.3em 0.3em 0.3em;
+  }
+  main {
+    padding: 0.7em 0.2em;
+    margin: 0.5em 0;
+    font-size: 0.98em;
+  }
+  #map {
+    height: 180px;
+  }
+  header h1 {
+    font-size: 1.2em;
+  }
+  section h2 {
+    font-size: 1em;
+  }
+  li {
+    font-size: 0.97em;
+    padding: 0.7em 0.7em;
+  }
+}
+@media (max-width: 480px) {
+  #upbar-widget {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    padding: 0.2em 0.1em 0.2em 0.1em;
+  }
+  main {
+    padding: 0.3em 0.1em;
+    margin: 0.2em 0;
+    font-size: 0.95em;
+  }
+  #map {
+    height: 120px;
+  }
+  header, footer {
+    padding: 0.6em 0;
+  }
+  header h1 {
+    font-size: 1em;
+  }
+  section h2 {
+    font-size: 0.95em;
+  }
+  li {
+    font-size: 0.93em;
+    padding: 0.5em 0.5em;
+  }
+  footer {
+    margin-bottom: 1.5em;
+  }
+}
