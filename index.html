@@ -8,8 +8,19 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-  <button id="sidebar-toggle" aria-label="Tampilkan/sembunyikan widget">☰</button>
-  <div id="sidebar-widget">
+  <button id="menu-toggle" aria-label="Tampilkan/sembunyikan menu">☰</button>
+  <aside id="sidebar-menu" class="collapsed">
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#map-section">Peta</a></li>
+        <li><a href="#fasilitas-section">Fasilitas</a></li>
+        <li><a href="#wisata-section">Wisata</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <div id="upbar-widget">
     <div id="widget-clock"></div>
     <div id="widget-cuaca"></div>
   </div>
