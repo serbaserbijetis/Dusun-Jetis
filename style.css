@@ -474,3 +474,18 @@ body, #layout {
     margin-bottom: 1.5em;
   }
 }
+.content-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  box-sizing: border-box;
+  width: 100%;
+}
+#upbar-widget {
+  justify-content: flex-end;
+}
+@media (max-width: 700px) {
+  .content-wrapper {
+    padding: 0 0.3em;
+  }
+}
