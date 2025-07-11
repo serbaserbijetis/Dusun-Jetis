@@ -29,11 +29,12 @@ header p {
   position: relative;
 }
 #sidebar-menu {
-  position: relative;
-  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
   min-width: 220px;
   max-width: 220px;
-  flex-shrink: 0;
   z-index: 2001;
   background: #eafaf1ee;
   border-right: 2px solid #81c784;
@@ -43,6 +44,9 @@ header p {
   transform: translateX(-110%);
   transition: transform 0.3s cubic-bezier(.4,2,.6,1);
   overflow-y: auto;
+}
+#sidebar-menu.collapsed {
+  transform: translateX(-110%);
 }
 #sidebar-menu:not(.collapsed) {
   transform: translateX(0);
@@ -463,6 +467,7 @@ body, #layout {
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(44, 62, 80, 0.35);
   z-index: 2000;
+  opacity: 0;
   transition: opacity 0.2s;
   pointer-events: none;
 }
