@@ -489,3 +489,25 @@ body, #layout {
     padding: 0 0.3em;
   }
 }
+
+/* Tambahkan atau pastikan kode berikut ada dan tidak tertimpa media query lain */
+
+/* Bungkus utama agar center */
+#main-content, .content-wrapper {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Pastikan main juga center */
+main {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Jika ada margin-top/bottom pada main, biarkan untuk spasi vertikal */
