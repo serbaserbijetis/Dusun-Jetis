@@ -93,13 +93,13 @@ footer {
 #sidebar-widget {
   position: fixed;
   top: 80px;
-  right: 0;
+  left: 0; /* dari right: 0 */
   width: 220px;
   background: #eafaf1ee;
-  border-left: 2px solid #81c784;
-  border-radius: 16px 0 0 16px;
-  box-shadow: -2px 2px 12px rgba(56,142,60,0.08);
-  padding: 1.2em 1em 1.2em 1.2em;
+  border-right: 2px solid #81c784; /* dari border-left */
+  border-radius: 0 16px 16px 0; /* dari 16px 0 0 16px */
+  box-shadow: 2px 2px 12px rgba(56,142,60,0.08); /* dari -2px */
+  padding: 1.2em 1.2em 1.2em 1em; /* padding kanan dan kiri ditukar */
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -239,7 +239,8 @@ footer {
 #sidebar-toggle {
   position: fixed;
   top: 22px;
-  right: 18px;
+  left: 18px; /* dari right: 18px */
+  right: auto;
   z-index: 200;
   background: #388e3c;
   color: #fff;
