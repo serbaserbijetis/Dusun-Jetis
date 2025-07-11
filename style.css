@@ -427,7 +427,6 @@ main {
   }
 }
 /* Sembunyikan sidebar lama dan tombolnya */
-#sidebar-widget, #sidebar-toggle { display: none !important; } 
 body, #layout {
   overflow-x: hidden;
 } 
@@ -442,4 +441,4 @@ body, #layout {
 #sidebar-overlay.active {
   display: block;
   opacity: 1;
-} 
+}
