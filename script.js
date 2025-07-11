@@ -86,3 +86,21 @@ function updateCuaca() {
 }
 updateCuaca();
 setInterval(updateCuaca, 10*60*1000); // update tiap 10 menit 
+
+// === Sidebar Collapsible ===
+const sidebar = document.getElementById('sidebar-widget');
+const toggleBtn = document.getElementById('sidebar-toggle');
+function setSidebarInitial() {
+  if (window.innerWidth <= 900) {
+    sidebar.classList.add('collapsed');
+  } else {
+    sidebar.classList.remove('collapsed');
+  }
+}
+if (sidebar && toggleBtn) {
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+  });
+  window.addEventListener('resize', setSidebarInitial);
+  document.addEventListener('DOMContentLoaded', setSidebarInitial);
+} 
