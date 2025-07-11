@@ -9,42 +9,46 @@
 </head>
 <body>
   <button id="menu-toggle" aria-label="Tampilkan/sembunyikan menu">☰</button>
-  <aside id="sidebar-menu" class="collapsed">
-    <nav>
-      <ul>
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#map-section">Peta</a></li>
-        <li><a href="#fasilitas-section">Fasilitas</a></li>
-        <li><a href="#wisata-section">Wisata</a></li>
-        <li><a href="#">Kontak</a></li>
-      </ul>
-    </nav>
-  </aside>
-  <div id="upbar-widget">
-    <div id="widget-clock"></div>
-    <div id="widget-cuaca"></div>
+  <div id="layout">
+    <aside id="sidebar-menu" class="collapsed">
+      <nav>
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#map-section">Peta</a></li>
+          <li><a href="#fasilitas-section">Fasilitas</a></li>
+          <li><a href="#wisata-section">Wisata</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div id="main-content">
+      <div id="upbar-widget">
+        <div id="widget-clock"></div>
+        <div id="widget-cuaca"></div>
+      </div>
+      <header>
+        <h1>Dusun Jetis, Desa Pakunden</h1>
+        <p>Kecamatan Ngluwar, Kabupaten Magelang</p>
+      </header>
+      <main>
+        <section id="map-section">
+          <h2>Peta Dusun Jetis</h2>
+          <div id="map"></div>
+        </section>
+        <section id="fasilitas-section">
+          <h2>Fasilitas Umum</h2>
+          <ul id="fasilitas-list"></ul>
+        </section>
+        <section id="wisata-section">
+          <h2>Tempat Wisata</h2>
+          <ul id="wisata-list"></ul>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2024 Dusun Jetis, Desa Pakunden</p>
+      </footer>
+    </div>
   </div>
-  <header>
-    <h1>Dusun Jetis, Desa Pakunden</h1>
-    <p>Kecamatan Ngluwar, Kabupaten Magelang</p>
-  </header>
-  <main>
-    <section id="map-section">
-      <h2>Peta Dusun Jetis</h2>
-      <div id="map"></div>
-    </section>
-    <section id="fasilitas-section">
-      <h2>Fasilitas Umum</h2>
-      <ul id="fasilitas-list"></ul>
-    </section>
-    <section id="wisata-section">
-      <h2>Tempat Wisata</h2>
-      <ul id="wisata-list"></ul>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2024 Dusun Jetis, Desa Pakunden</p>
-  </footer>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
