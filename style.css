@@ -1,9 +1,8 @@
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #eafaf1;
-  color: #234d20;
+html, body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 header, footer {
   background: linear-gradient(90deg, #388e3c 60%, #81c784 100%);
@@ -27,6 +26,7 @@ header p {
   min-height: 100vh;
   width: 100vw;
   box-sizing: border-box;
+  position: relative;
 }
 #sidebar-menu {
   position: relative;
@@ -53,6 +53,8 @@ header p {
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 main {
   max-width: 900px;
@@ -61,6 +63,8 @@ main {
   padding: 2em;
   border-radius: 14px;
   box-shadow: 0 2px 16px rgba(56,142,60,0.08);
+  width: 100%;
+  box-sizing: border-box;
 }
 #map {
   width: 100%;
@@ -381,8 +385,8 @@ footer {
     padding: 2.2em 0.7em 1em 0.7em;
   }
   #upbar-widget {
-    padding: 0.5em 1em 0.5em 0.5em;
-    gap: 10px;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    gap: 8px;
   }
   #upbar-widget #widget-clock, #upbar-widget #widget-cuaca {
     font-size: 0.98em;
@@ -396,7 +400,7 @@ footer {
 @media (max-width: 600px) {
   #sidebar-menu {
     min-width: 90vw;
-    max-width: 90vw;
+    max-width: 95vw;
     padding: 2em 0.3em 1em 0.3em;
   }
   #upbar-widget {
@@ -404,6 +408,11 @@ footer {
     align-items: flex-end;
     gap: 4px;
     padding: 0.3em 0.3em 0.3em 0.3em;
+  }
+  main {
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 98vw;
   }
 }
 /* Pastikan konten utama tidak tertutup sidebar */
