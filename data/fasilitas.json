@@ -1,17 +1,17 @@
 [
   {
-    "nama": "Masjid Al-Huda",
+    "nama": "Masjid Darul Aman",
     "jenis": "Masjid",
-    "lat": -7.6062,
-    "lng": 110.2328,
+    "lat": -7.659988,
+    "lng": 110.289184,
     "keterangan": "Masjid utama dusun Jetis",
     "icon": "https://cdn-icons-png.flaticon.com/512/1998/1998611.png"
   },
   {
-    "nama": "Mushola Baiturrahman",
+    "nama": "Mushola Al-Huda",
     "jenis": "Mushola",
-    "lat": -7.6067,
-    "lng": 110.2331,
+    "lat": -7.662051,
+    "lng": 110.286526,
     "keterangan": "Mushola di RT 02",
     "icon": "https://cdn-icons-png.flaticon.com/512/1998/1998611.png"
   },
