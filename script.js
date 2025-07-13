@@ -38,20 +38,6 @@ fetch('data/fasilitas.json')
   });
 
 
-fetch('data/wisata.json')
-  .then(res => res.json())
-  .then(data => {
-    const list = document.getElementById('wisata-list');
-    data.forEach(wisata => {
-      // Tambahkan marker ke peta
-      addMarker(wisata, wisata.icon);
-      // Tambahkan ke daftar
-      const li = document.createElement('li');
-      li.textContent = wisata.nama;
-      list.appendChild(li);
-    });
-  }); 
-
 // === Widget Jam & Tanggal ===
 function updateClock() {
   const now = new Date();
