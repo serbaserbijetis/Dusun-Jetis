@@ -7,6 +7,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 function addMarker(item, iconUrl) {
+  if (typeof item.lat !== 'number' || typeof item.lng !== 'number' || isNaN(item.lat) || isNaN(item.lng)) {
+    console.warn('Data marker tidak lengkap atau salah format:', item);
+    return;
+  }
   const icon = iconUrl ? L.icon({
     iconUrl,
     iconSize: [32, 32],
