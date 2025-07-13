@@ -1,4 +1,4 @@
-const CENTER_COORDS = [-7.6065, 110.2325]; 
+const CENTER_COORDS = [-7.66259, 110.28656]; 
 
 const map = L.map('map').setView(CENTER_COORDS, 16);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
