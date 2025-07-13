@@ -5,7 +5,7 @@
     "lat": -7.660014,
     "lng": 110.289184,
     "keterangan": "Masjid utama dusun Jetis",
-    "icon": "https://cdn-icons-png.flaticon.com/512/1998/1998611.png"
+    "icon": "https://cdn-icons-png.flaticon.com/128/7515/7515485.png"
   },
   {
     "nama": "Mushola Al-Huda",
@@ -13,14 +13,22 @@
     "lat": -7.662043,
     "lng": 110.286502,
     "keterangan": "Mushola di RT 02",
-    "icon": "https://cdn-icons-png.flaticon.com/512/1998/1998611.png"
+    "icon": "https://cdn-icons-png.flaticon.com/128/7515/7515485.png"
   },
   {
-    "nama": "Toilet Umum Pasar",
-    "jenis": "Toilet",
-    "lat": -7.6069,
-    "lng": 110.2322,
-    "keterangan": "Toilet umum dekat pasar dusun",
-    "icon": "https://cdn-icons-png.flaticon.com/512/3062/3062634.png"
+    "nama": "Warung Bu Sukarni",
+    "jenis": "Toko",
+    "lat": -7.661849,
+    "lng": 110.286443,
+    "keterangan": "Warung Bu Sukarni Dusun Jetis",
+    "icon": "https://cdn-icons-png.flaticon.com/128/869/869636.png"
+  },
+  {
+    "nama": "Warung Es Degan",
+    "jenis": "Toko",
+    "lat": -7.662168,
+    "lng": 110.286142,
+    "keterangan": "Warung Es Degan Dusun Jetis",
+    "icon": "https://cdn-icons-png.flaticon.com/128/869/869636.png"
   }
-] 
+]  
