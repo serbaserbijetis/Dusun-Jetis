@@ -9,27 +9,17 @@
 </head>
 <body>
   <div id="upbar-widget">
-    <button id="sidebar-toggle" aria-label="Buka menu">☰</button>
-    <div class="upbar-center">
-      <div class="upbar-title">
-        <h1>Dusun Jetis, Desa Pakunden</h1>
-        <p>Kecamatan Ngluwar, Kabupaten Magelang</p>
-      </div>
-    </div>
+    <img src="logo-magelang.png" alt="Logo Kabupaten Magelang" id="logo-magelang">
     <div id="widget-clock"></div>
     <div id="widget-cuaca"></div>
   </div>
-  <nav id="sidebar-menu" class="collapsed">
-    <ul>
-      <li><a href="#map-section" id="menu-peta">Peta</a></li>
-      <li><a href="#fasilitas-section" id="menu-fasilitas">Fasilitas</a></li>
-    </ul>
-  </nav>
-  <div id="sidebar-overlay"></div>
   <div id="layout">
     <div id="main-content">
       <div class="content-wrapper">
-        <!-- header dihapus, sudah di upbar -->
+        <header>
+          <h1>Dusun Jetis, Desa Pakunden</h1>
+          <p>Kecamatan Ngluwar, Kabupaten Magelang</p>
+        </header>
         <main>
           <section id="map-section">
             <h2>Peta Dusun Jetis</h2>
@@ -49,24 +39,6 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
   <script>
-    // Sidebar drawer logic
-    const sidebar = document.getElementById('sidebar-menu');
-    const overlay = document.getElementById('sidebar-overlay');
-    const toggleBtn = document.getElementById('sidebar-toggle');
-    toggleBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
-      overlay.classList.toggle('show');
-    });
-    overlay.addEventListener('click', () => {
-      sidebar.classList.remove('open');
-      overlay.classList.remove('show');
-    });
-    document.querySelectorAll('#sidebar-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        sidebar.classList.remove('open');
-        overlay.classList.remove('show');
-      });
-    });
     // Fetch fasilitas
     fetch('data/fasilitas.json')
       .then(res => res.json())
