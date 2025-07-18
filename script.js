@@ -1,24 +1,25 @@
-const CENTER_COORDS = [-7.66259, 110.28656];
+if (document.getElementById('map')) {
+  const CENTER_COORDS = [-7.66259, 110.28656];
+  const map = L.map('map').setView(CENTER_COORDS, 16);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
 
-const map = L.map('map').setView(CENTER_COORDS, 16);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap contributors'
-}).addTo(map);
-
-function addMarker(item, iconUrl) {
-  if (typeof item.lat !== 'number' || typeof item.lng !== 'number' || isNaN(item.lat) || isNaN(item.lng)) {
-    console.warn('Data marker tidak lengkap atau salah format:', item);
-    return;
+  function addMarker(item, iconUrl) {
+    if (typeof item.lat !== 'number' || typeof item.lng !== 'number' || isNaN(item.lat) || isNaN(item.lng)) {
+      console.warn('Data marker tidak lengkap atau salah format:', item);
+      return;
+    }
+    const icon = iconUrl ? L.icon({
+      iconUrl,
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -32]
+    }) : undefined;
+    L.marker([item.lat, item.lng], icon ? { icon } : undefined)
+      .addTo(map)
+      .bindPopup(`<b>${item.nama}</b><br>${item.keterangan || ''}`);
   }
-  const icon = iconUrl ? L.icon({
-    iconUrl,
-    iconSize: [32, 32],
-    iconAnchor: [16, 32],
-    popupAnchor: [0, -32]
-  }) : undefined;
-  L.marker([item.lat, item.lng], icon ? { icon } : undefined)
-    .addTo(map)
-    .bindPopup(`<b>${item.nama}</b><br>${item.keterangan || ''}`);
 }
 
 // === Widget Jam & Tanggal ===
@@ -28,7 +29,9 @@ function updateClock() {
   const bulan = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
   const tgl = `${hari[now.getDay()]}, ${now.getDate()} ${bulan[now.getMonth()]} ${now.getFullYear()}`;
   const jam = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-  document.getElementById('widget-clock').innerHTML = `<span>${tgl}</span><br><strong>${jam}</strong>`;
+  if (document.getElementById('widget-clock')) {
+    document.getElementById('widget-clock').innerHTML = `<span>${tgl}</span><br><strong>${jam}</strong>`;
+  }
 }
 setInterval(updateClock, 1000);
 updateClock();
@@ -51,10 +54,12 @@ function updateCuaca() {
       if ([51,53,55,56,57,61,63,65,66,67,80,81,82].includes(kode)) { icon = '🌦️'; desc = 'Hujan'; }
       if ([71,73,75,77,85,86].includes(kode)) { icon = '❄️'; desc = 'Salju'; }
       if ([95,96,99].includes(kode)) { icon = '⛈️'; desc = 'Badai'; }
-      document.getElementById('widget-cuaca').innerHTML = `
-        <span title="${desc}">${icon}</span>
-        <span><strong>${suhu}&deg;C</strong><br><span style="font-size:0.95em">${desc}</span></span>
-      `;
+      if (document.getElementById('widget-cuaca')) {
+        document.getElementById('widget-cuaca').innerHTML = `
+          <span title="${desc}">${icon}</span>
+          <span><strong>${suhu}&deg;C</strong><br><span style="font-size:0.95em">${desc}</span></span>
+        `;
+      }
     });
 }
 updateCuaca();
