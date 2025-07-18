@@ -46,8 +46,9 @@
       .then(data => {
         const list = document.getElementById('fasilitas-list');
         data.forEach(fasilitas => {
+          const slug = fasilitas.nama.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, '-');
           const li = document.createElement('li');
-          li.innerHTML = `<strong>${fasilitas.nama}</strong>`;
+          li.innerHTML = `<a href="fasilitas-${slug}.html" class="btn-fasilitas">${fasilitas.nama}</a>`;
           list.appendChild(li);
         });
       });
