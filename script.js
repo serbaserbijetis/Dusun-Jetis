@@ -1,10 +1,9 @@
-const CENTER_COORDS = [-7.66259, 110.28656]; 
+const CENTER_COORDS = [-7.66259, 110.28656];
 
 const map = L.map('map').setView(CENTER_COORDS, 16);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
-
 
 function addMarker(item, iconUrl) {
   if (typeof item.lat !== 'number' || typeof item.lng !== 'number' || isNaN(item.lat) || isNaN(item.lng)) {
@@ -21,22 +20,6 @@ function addMarker(item, iconUrl) {
     .addTo(map)
     .bindPopup(`<b>${item.nama}</b><br>${item.keterangan || ''}`);
 }
-
-
-fetch('data/fasilitas.json')
-  .then(res => res.json())
-  .then(data => {
-    const list = document.getElementById('fasilitas-list');
-    data.forEach(fasilitas => {
-      // Tambahkan marker ke peta
-      addMarker(fasilitas, fasilitas.icon);
-      // Tambahkan ke daftar
-      const li = document.createElement('li');
-      li.textContent = `${fasilitas.nama} (${fasilitas.jenis})`;
-      list.appendChild(li);
-    });
-  });
-
 
 // === Widget Jam & Tanggal ===
 function updateClock() {
@@ -75,4 +58,4 @@ function updateCuaca() {
     });
 }
 updateCuaca();
-setInterval(updateCuaca, 10*60*1000); // update tiap 10 menit 
+setInterval(updateCuaca, 10*60*1000); 
