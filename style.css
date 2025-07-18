@@ -285,13 +285,21 @@ footer {
   border-bottom: 2px solid #81c784;
   box-shadow: 0 2px 8px rgba(56,142,60,0.06);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   gap: 18px;
   padding: 0.5em 2.5em 0.5em 1em;
   position: sticky;
   top: 0;
   z-index: 150;
+}
+#upbar-widget #widget-clock {
+  order: 1;
+  margin-right: auto;
+}
+#upbar-widget #widget-cuaca {
+  order: 2;
+  margin-left: auto;
 }
 #upbar-widget #widget-clock, #upbar-widget #widget-cuaca {
   background: #fff;
@@ -339,12 +347,13 @@ footer {
     overflow-y: auto;
   }
   #upbar-widget {
-    padding: 0.5em 0.5em 0.5em 0.5em;
+    flex-direction: column;
+    align-items: stretch;
     gap: 8px;
+    padding: 0.5em 0.5em 0.5em 0.5em;
   }
   #upbar-widget #widget-clock, #upbar-widget #widget-cuaca {
-    font-size: 0.98em;
-    padding: 0.4em 0.5em;
+    margin: 0;
   }
   #upbar-widget #widget-cuaca img {
     width: 22px;
