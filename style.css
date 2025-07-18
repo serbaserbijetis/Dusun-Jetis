@@ -361,6 +361,26 @@ footer {
   }
 }
 @media (max-width: 600px) {
+  #upbar-widget {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    padding: 0.3em 0.2em 0.3em 0.2em !important;
+  }
+  #upbar-widget #widget-clock, #upbar-widget #widget-cuaca {
+    width: 48% !important;
+    margin: 0 !important;
+    font-size: 0.98em !important;
+    text-align: center !important;
+    box-sizing: border-box;
+  }
+  #upbar-widget #widget-cuaca img {
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
+@media (max-width: 600px) {
   #sidebar-menu {
     min-width: 90vw;
     max-width: 95vw;
