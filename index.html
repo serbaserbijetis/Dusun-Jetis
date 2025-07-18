@@ -58,7 +58,7 @@
         const list = document.getElementById('fasilitas-list');
         data.forEach(fasilitas => {
           const li = document.createElement('li');
-          li.innerHTML = `<strong>${fasilitas.nama}</strong> <span style='color:#388e3c;font-size:0.95em'>(${fasilitas.jenis})</span><br><span style='font-size:0.97em'>${fasilitas.keterangan||''}</span>`;
+          li.innerHTML = `<strong>${fasilitas.nama}</strong><br><span style='font-size:0.97em'>${fasilitas.keterangan||''}</span>`;
           list.appendChild(li);
         });
       });
