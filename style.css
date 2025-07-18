@@ -102,7 +102,7 @@ footer {
   padding: 1.2em 0;
   letter-spacing: 1px;
   font-size: 1em;
-  z-index: 100;
+  z-index: 1000;
   box-shadow: 0 -2px 8px rgba(56,142,60,0.06);
 }
 body {
@@ -131,7 +131,7 @@ body::before {
     left: 0;
     bottom: 0;
     width: 100vw;
-    z-index: 9999;
+    z-index: 1000;
     background: linear-gradient(90deg, #388e3c 60%, #81c784 100%);
     color: #fff;
     text-align: center;
@@ -139,8 +139,8 @@ body::before {
     font-size: 0.95em;
     box-shadow: 0 -2px 8px rgba(56,142,60,0.06);
   }
-  body {
-    padding-bottom: 56px !important;
+    body {
+    padding-bottom: 70px !important;
   }
 }
 /* Sidebar Widget */
