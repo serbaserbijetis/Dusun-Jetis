@@ -49,11 +49,13 @@
     const sidebar = document.getElementById('sidebar-menu');
     const toggleBtn = document.getElementById('sidebar-toggle');
     toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
       sidebar.classList.toggle('collapsed');
     });
     // Close sidebar on menu click (mobile UX)
     document.querySelectorAll('#sidebar-menu a').forEach(link => {
       link.addEventListener('click', () => {
+        sidebar.classList.remove('open');
         sidebar.classList.add('collapsed');
       });
     });
