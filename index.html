@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
+  <button id="sidebar-toggle" aria-label="Buka menu">☰</button>
+  <nav id="sidebar-menu" class="collapsed">
+    <ul>
+      <li><a href="#map-section" id="menu-peta">Peta</a></li>
+      <li><a href="#fasilitas-section" id="menu-fasilitas">Fasilitas</a></li>
+    </ul>
+  </nav>
   <div id="layout">
     <div id="main-content">
       <div class="content-wrapper">
@@ -37,5 +44,19 @@
   </div>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
+  <script>
+    // Sidebar toggle logic
+    const sidebar = document.getElementById('sidebar-menu');
+    const toggleBtn = document.getElementById('sidebar-toggle');
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+    // Close sidebar on menu click (mobile UX)
+    document.querySelectorAll('#sidebar-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        sidebar.classList.add('collapsed');
+      });
+    });
+  </script>
 </body>
 </html> 
