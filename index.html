@@ -74,7 +74,7 @@
         const list = document.getElementById('fasilitas-list');
         data.forEach(fasilitas => {
           const li = document.createElement('li');
-          li.innerHTML = `<strong>${fasilitas.nama}</strong><br><span style='font-size:0.97em'>${fasilitas.keterangan||''}</span>`;
+          li.innerHTML = `<strong>${fasilitas.nama}</strong>`;
           list.appendChild(li);
         });
       });
