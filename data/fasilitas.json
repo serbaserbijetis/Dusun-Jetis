@@ -1,7 +1,6 @@
 [
   {
     "nama": "Masjid Darul Aman",
-    "jenis": "Masjid",
     "lat": -7.660014,
     "lng": 110.289184,
     "keterangan": "Masjid utama dusun Jetis",
@@ -9,7 +8,6 @@
   },
   {
     "nama": "Mushola Al-Huda",
-    "jenis": "Mushola",
     "lat": -7.662043,
     "lng": 110.286502,
     "keterangan": "Mushola di RT 02",
@@ -17,7 +15,6 @@
   },
   {
     "nama": "Warung Bu Sukarni",
-    "jenis": "Toko",
     "lat": -7.661849,
     "lng": 110.286443,
     "keterangan": "Warung Bu Sukarni Dusun Jetis",
@@ -25,7 +22,6 @@
   },
   {
     "nama": "Warung Es Degan",
-    "jenis": "Toko",
     "lat": -7.662168,
     "lng": 110.286142,
     "keterangan": "Warung Es Degan Dusun Jetis",
