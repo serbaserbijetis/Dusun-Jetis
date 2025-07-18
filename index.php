@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Dusun Jetis - Desa Pakunden</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <button id="sidebar-toggle" aria-label="Buka menu">☰</button>
+  <nav id="sidebar-menu" class="collapsed">
+    <ul>
+      <li><a href="#map-section" id="menu-peta">Peta</a></li>
+      <li><a href="#fasilitas-section" id="menu-fasilitas">Fasilitas</a></li>
+    </ul>
+  </nav>
+  <div id="layout">
+    <div id="main-content">
+      <div class="content-wrapper">
+        <div id="upbar-widget">
+          <div id="widget-clock"></div>
+          <div id="widget-cuaca"></div>
+        </div>
+        <header>
+          <h1>Dusun Jetis, Desa Pakunden</h1>
+          <p>Kecamatan Ngluwar, Kabupaten Magelang</p>
+        </header>
+        <main>
+          <section id="map-section">
+            <h2>Peta Dusun Jetis</h2>
+            <div id="map"></div>
+          </section>
+          <section id="fasilitas-section">
+            <h2>Fasilitas Umum</h2>
+            <ul id="fasilitas-list"></ul>
+          </section>
+        </main>
+        <footer>
+          <p>&copy; 2024 Dusun Jetis, Desa Pakunden</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Sidebar toggle logic
+    const sidebar = document.getElementById('sidebar-menu');
+    const toggleBtn = document.getElementById('sidebar-toggle');
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      sidebar.classList.toggle('collapsed');
+    });
+    // Close sidebar on menu click (mobile UX)
+    document.querySelectorAll('#sidebar-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+        sidebar.classList.add('collapsed');
+      });
+    });
+    // Fetch fasilitas
+    fetch('data/fasilitas.json')
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById('fasilitas-list');
+        data.forEach(fasilitas => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${fasilitas.nama}</strong> <span style='color:#388e3c;font-size:0.95em'>(${fasilitas.jenis})</span><br><span style='font-size:0.97em'>${fasilitas.keterangan||''}</span>`;
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html> 
