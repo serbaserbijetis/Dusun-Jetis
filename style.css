@@ -627,8 +627,11 @@ main {
     min-width: 180px;
     max-width: 90vw;
     padding: 1.5em 0.7em 1em 0.7em;
-    margin-top: 60px; /* beri ruang untuk upbar-widget */
+    top: 60px;
+    left: 0;
+    margin-top: 0;
     height: calc(100vh - 60px);
+    position: fixed;
   }
   #layout {
     margin-left: 0;
