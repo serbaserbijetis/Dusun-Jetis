@@ -310,6 +310,7 @@ footer {
   }
 }
 #sidebar-menu.inline-menu {
+  display: block !important;
   background: none;
   border: none;
   box-shadow: none;
@@ -361,8 +362,8 @@ footer {
     margin-top: 0.5em;
   }
 }
-/* Hapus style sidebar lama */
-#sidebar-menu:not(.inline-menu), #sidebar-toggle { display: none !important; }
+/* Hapus semua style sidebar lama */
+#sidebar-menu:not(.inline-menu), #sidebar-toggle, #sidebar-widget, #sidebar-widget * { display: none !important; }
 
 @media (max-width: 600px) {
   #upbar-widget {
