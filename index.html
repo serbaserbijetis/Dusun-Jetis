@@ -30,6 +30,10 @@
             <h2>Fasilitas Umum</h2>
             <ul id="fasilitas-list"></ul>
           </section>
+          <section id="umkm-section">
+            <h2>UMKM Dusun Jetis</h2>
+            <ul id="umkm-list"></ul>
+          </section>
         </main>
         <footer>
           <p>&copy; 2024 Dusun Jetis, Desa Pakunden</p>
@@ -45,11 +49,17 @@
       .then(res => res.json())
       .then(data => {
         const list = document.getElementById('fasilitas-list');
+        const umkmList = document.getElementById('umkm-list');
         data.forEach(fasilitas => {
           const slug = fasilitas.nama.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, '-');
           const li = document.createElement('li');
-          li.innerHTML = `<a href="fasilitas-${slug}.html" class="btn-fasilitas">${fasilitas.nama}</a>`;
-          list.appendChild(li);
+          if (fasilitas.nama === 'Warung Bu Sukarni' || fasilitas.nama === 'Warung Es Degan') {
+            li.innerHTML = `<a href="fasilitas-${slug}.html" class="btn-fasilitas">${fasilitas.nama}</a>`;
+            umkmList.appendChild(li);
+          } else {
+            li.innerHTML = `<a href="fasilitas-${slug}.html" class="btn-fasilitas">${fasilitas.nama}</a>`;
+            list.appendChild(li);
+          }
         });
       });
   </script>
