@@ -1,27 +1,3 @@
-if (document.getElementById('map')) {
-  const CENTER_COORDS = [-7.66259, 110.28656];
-  const map = L.map('map').setView(CENTER_COORDS, 16);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
-
-  function addMarker(item, iconUrl) {
-    if (typeof item.lat !== 'number' || typeof item.lng !== 'number' || isNaN(item.lat) || isNaN(item.lng)) {
-      console.warn('Data marker tidak lengkap atau salah format:', item);
-      return;
-    }
-    const icon = iconUrl ? L.icon({
-      iconUrl,
-      iconSize: [32, 32],
-      iconAnchor: [16, 32],
-      popupAnchor: [0, -32]
-    }) : undefined;
-    L.marker([item.lat, item.lng], icon ? { icon } : undefined)
-      .addTo(map)
-      .bindPopup(`<b>${item.nama}</b><br>${item.keterangan || ''}`);
-  }
-}
-
 // === Widget Jam & Tanggal ===
 function updateClock() {
   const now = new Date();
